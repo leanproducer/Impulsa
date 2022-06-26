@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title></title>
-  <style>
-      body {
-        background-color: lightblue;
-        text-align: center;
-      }
-      
-      .lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+      <style type="text/css">
+        body{
+            display: flex;        
+            place-items: center;
+            justify-content: center;
+            height: 80vh;
+            background: #111b21;
+        }
+        .loader {
+            border: 16px solid #111b21;
+            /* Light grey */
+            border-top: 16px solid #f25ea3;
+            border-bottom: 16px solid #f2e313;
+            /* Dark Green */
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            animation: spinloader 2s linear infinite;
+           
+           
+        }
+  
+        .loader img {
+           width: 400px;
+            height: 400px;
+            
+            animation: spinlogo 2s linear infinite;
+           
 
-  </style>
+        }
+  
+        @keyframes spinloader {
+            0% {
+                transform: rotate(0deg);
+            }
+  
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+  
+        @keyframes spinlogo {
+            0% {
+                transform: rotate(360deg);
+            }
+  
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
 </head>
 <body>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxmpr9PrhxFm-BDq7RZ1X6ytsxBC-m72oMHNnaJlEJ33Sm1MQsPZtcgItdbsIhMYSgYdA/exec";
+    const AS_URL_BASE = "https://script.google.com /a/~/macros/s/AKfycbxlclkUI3286ddo72st3WU9lU3uVlnSPtdMkCQ55si-_DkcdAqxOvbGtn_IjRPAPH5i/exec";
     
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);
@@ -69,7 +77,10 @@
 
   </script>
   
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+   <div class="loader">
+        <img src=
+"https://leandev.site/wp-content/uploads/2022/06/loader-I.png" />
+    </div>
   
   
 </body>
